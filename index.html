@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do the Most Lyrical Rappers Really Have the Biggest Vocabulary?</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Hip-Hop · Language · Data Story</p>
+      <h1>Do the most lyrical rappers really have the biggest vocabulary?</h1>
+      <p class="dek">
+        Counting unique words is one way to measure lyrical range. But if each era of hip-hop has its own language norms,
+        then a raw all-time ranking can miss what makes an artist exceptional in context.
+      </p>
+      <div class="byline">By Wenyang Hu</div>
+    </div>
+  </header>
+
+  <main class="story">
+    <section class="lede">
+      <p>
+        The use of vocabulary as a measure of the complexity of rap lyrics is a well-established practice. There are many reasons for
+        this, but the most important reason might be the fact that using vocabulary as a measure of the complexity of rap lyrics lends
+        itself to a numerical value, and everything numerical lends itself to a decisive conclusion. If rapper A uses more unique words
+        than rapper B, then it would be natural to conclude that rapper A must be more skilled, more ambitious, or more talented than
+        rapper B.
+      </p>
+      <p>
+        However, the reality of rap music and the reality of the world of rap lyrics is the fact that rap music and rap lyrics have
+        never existed in a world of fixed and stable linguistic conditions. Each era of rap music has its own conditions, its own norms,
+        and its own expectations. Therefore, the fact that a rapper might use a large number of unique words might tell us how much
+        vocabulary the rapper used, but it would never tell us whether that vocabulary use was ordinary for its own era or whether it
+        was unusually large for its own era.
+      </p>
+      <p>
+        The purpose of the text being written and the purpose of the text being read is to establish the fact that the absolute ranking
+        of rappers by the number of unique words they use might be descriptive but would never be decisive. Therefore, to establish the
+        essence of the complexity of rap lyrics, the data must consider the question of how much a rapper's vocabulary use stretched
+        beyond the norms of its own era.
+      </p>
+    </section>
+
+    <aside class="controls-panel">
+      <div class="focus-card">
+        <p class="focus-label">Current focus</p>
+        <h2 id="focus-title">No artist selected</h2>
+        <p id="focus-body">
+          Hover any mark for details. Click an artist in any chart to keep that person highlighted across the full story.
+          Click an era chip to filter all three views at once.
+        </p>
+      </div>
+      <div class="chip-group" id="era-chips">
+        <button class="chip active" data-era="All">All eras</button>
+      </div>
+      <button id="reset-view" class="reset-btn">Reset story view</button>
+    </aside>
+
+    <section class="scrolly" aria-label="Scrollytelling story">
+      <div class="scrolly-graphic">
+        <div class="scrolly-graphic-inner">
+          <div class="graphic-label">Scroll to move through the argument</div>
+          <div class="chart-card chart-panel is-active" data-chart-panel="1">
+            <div class="chart-header">
+              <h3>Top 15 artists by raw vocabulary</h3>
+              <p>Hover for details · Click an artist to highlight them across the story</p>
+            </div>
+            <div id="chart1" class="chart"></div>
+          </div>
+          <div class="chart-card chart-panel" data-chart-panel="2">
+            <div class="chart-header">
+              <h3>Each artist positioned within their own era</h3>
+              <p>Hover dots for exact values · Click an era chip above to filter the entire page</p>
+            </div>
+            <div id="chart2" class="chart"></div>
+          </div>
+          <div class="chart-card chart-panel" data-chart-panel="3">
+            <div class="chart-header">
+              <h3>How the ranking changes after adjusting for era</h3>
+              <p>Hover lines for rank shifts · Click labels to keep an artist highlighted</p>
+            </div>
+            <div id="chart3" class="chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly-text">
+        <article class="step-card is-active" data-scrolly-step="1">
+          <p class="step">Step 1</p>
+          <h2>Raw scale is persuasive</h2>
+          <p>
+            The original logic of the all-time vocabulary ranking is persuasive for a reason. It translates lyrical range into a
+            numerical hierarchy, and numerical hierarchies feel conclusive. If one rapper used more unique words than another, it is
+            easy to treat that result as evidence of greater lyrical achievement.
+          </p>
+          <p>
+            This first view preserves that original claim on purpose. It shows why the argument is compelling, but it also reveals the
+            assumption underneath it: that every artist can be judged against the same world of language, regardless of era.
+          </p>
+        </article>
+
+        <article class="step-card" data-scrolly-step="2">
+          <p class="step">Step 2</p>
+          <h2>Context changes what counts as exceptional</h2>
+          <p>
+            When each artist is put back in their own world of language, their own decade, then the meaning of the statistics changes.
+            What one artist says, and how that relates to what others said, becomes more relevant. What matters is how far each artist
+            rose above what others said in their own time.
+          </p>
+          <p>
+            This second view is the counterargument to the original ranking. Once each artist is compared to the baseline of their own
+            era, the all-time ordering stops looking neutral. Some artists are helped by being judged in comparison to decades where the
+            average artist said less, and others are harmed by being judged in comparison to decades where the average artist said more.
+          </p>
+        </article>
+
+        <article class="step-card" data-scrolly-step="3">
+          <p class="step">Step 3</p>
+          <h2>Relative advantage tells a sharper story</h2>
+          <p>
+            The last comparison asks the toughest and most interesting question of all. Which artists shine after accounting for their
+            historical context? When each artist is ranked based on how far they rose above their own decade’s average, the rankings are
+            not the same.
+          </p>
+          <p>
+            These changes are the refutation. The movement between the two rankings shows that the original all-time hierarchy cannot be
+            treated as the final word on lyrical greatness. What matters is not only what an artist said, but how far they rose above
+            what others said in their own time.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        The strongest conclusion that can be drawn from these statistics is that, while the statistics are not wrong, they are
+        incomplete. They can be used to describe the scale of an artist’s language, but they cannot be used to describe their
+        greatness.
+      </p>
+      <p>
+        If one considers the entirety of rap as one timeless pool of language, then the individuals with the largest totals will
+        always seem to be the ones who tell the whole story. However, once one considers each era as their own benchmark, then the
+        more precise notion of greatness comes into view. The most compelling way to look at the matter is not based on the
+        individuals who used the most unique words overall. It is based on the individuals who most exceeded the vocabulary norms of
+        their time.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-block">
+        <h3>Sources</h3>
+        <p>
+          Remix source:
+          <a href="https://pudding.cool/projects/vocabulary/" target="_blank" rel="noopener">The Largest Vocabulary in Hip Hop</a>.
+          Original author: Matt Daniels.
+        </p>
+        <p>
+          Data:
+          <a href="https://docs.google.com/spreadsheets/d/1HIIfgDpNMM-j0hoQHN-yP5P1lNOfJuvym0u0sdWwD9g/edit?gid=737896402#gid=737896402" target="_blank" rel="noopener">Hip-hop vocabulary spreadsheet</a>.
+        </p>
+      </div>
+      <div class="footer-block">
+        <h3>Author</h3>
+        <p>Wenyang Hu</p>
+        <p>Original story credited on this page to Matt Daniels.</p>
+      </div>
+      <div class="footer-block">
+        <h3>AI usage disclosure</h3>
+        <p>
+          ChatGPT was used for planning and code debugging.
+          Final story decisions, framing, and curation were completed by Wenyang Hu.
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="tooltip" class="tooltip"></div>
+  <script src="main.js"></script>
+</body>
+</html>
